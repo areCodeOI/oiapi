@@ -13,7 +13,7 @@ class Utils {
 	 * @param mixed $data
 	 * @return string|false
 	 */
-	public static function http_build_query($data) {
+	public static function http_build_query($data) : string {
 		return http_build_query($data, '', '&', PHP_QUERY_RFC3986);
 	}
 	/**
@@ -22,7 +22,7 @@ class Utils {
 	 * @param array|object $array 需要输出的内容
 	 * @return string
 	 */
-	public static function json(array|object $array) {
+	public static function json(array|object $array) : string {
 		return json_encode($array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 	}
 	/**
@@ -31,7 +31,7 @@ class Utils {
 	 * @param array $Cookie 需要转换的Cookie
 	 * @return array
 	 */
-	public static function Cookie2json($Cookie = '') {
+	public static function Cookie2json($Cookie = '') : array {
 		$e = [];
 		foreach(explode(';', $Cookie) as $v) {
 			if(preg_match('/(.+?)=(.+)/', $v, $preg)) {
@@ -46,7 +46,7 @@ class Utils {
 	 * @param array $json jsonCookie
 	 * @return string
 	 */
-	public static function json2Cookie(array $json) {
+	public static function json2Cookie(array $json) : string {
 		$Cookie = '';
 		foreach($json as $k=>$v) {
 			if(is_array($v)) {
@@ -64,7 +64,7 @@ class Utils {
 	 * @param string $str 需要检测的内容
 	 * @return bool
 	 */
-	public static function isChinese(string $str): bool {
+	public static function isChinese(string $str) : bool {
 		return preg_match('/^[\x{4e00}-\x{9fa5}]+$/u', $str) ? true : false;
 	}
 }

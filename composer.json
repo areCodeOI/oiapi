@@ -15,7 +15,14 @@
 			"email": "admin@oiapi.net"
 		}
 	],
+	"keywords": [
+		"oiapi",
+		"oiapi.net"
+	],
 	"require": {
-		"php": ">= 8.1"
+		"php": "^8.1",
+		"ext-curl": "*",
+		"ext-json": "*",
+		"ext-openssl": "*"
 	}
 }
