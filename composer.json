@@ -1,0 +1,15 @@
+{
+    "name": "oiapi/oiapi",
+    "description": "方便快速的调用oiapi.net的接口",
+    "autoload": {
+        "psr-4": {
+            "Oiapi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OIAPI"
+        }
+    ],
+    "require": {}
+}
