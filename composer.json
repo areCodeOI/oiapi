@@ -1,15 +1,21 @@
 {
-    "name": "oiapi/oiapi",
-    "description": "方便快速的调用oiapi.net的接口",
-    "autoload": {
-        "psr-4": {
-            "Oiapi\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "OIAPI"
-        }
-    ],
-    "require": {}
+	"name": "oiapi/oiapi",
+	"description": "方便快速的调用oiapi.net的接口",
+	"minimum-stability": "stable",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Oiapi\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "OIAPI",
+			"email": "admin@oiapi.net"
+		}
+	],
+	"require": {
+		"php": ">= 8.1"
+	}
 }
