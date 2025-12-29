@@ -46,9 +46,9 @@ class Manager {
 	}
 	/**
 	 * @param string $name        api名字
-	 * @return object
+	 * @return object|array
 	 */
-	public function search(string $name) : object {
+	public function search(string $name) : object|array {
 		$this->client->get("/ApiSearch?keyword=" . urlencode($name));
 		if($res = $this->client->object()) {
 			switch($res->code) {

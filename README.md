@@ -94,13 +94,13 @@ echo $Manager->go('啾啾');
  * @return object
  */
 
-Oiapi\Manager::getById(int $id);  //通过id获取接口信息，返回值为object
+Oiapi\Manager::getById(int $id);
 
 /**
  * @param string $name        api名字
- * @return object
+ * @return object|array
  */
-Oiapi\Manager::getByName(string $name);  //通过名字获取接口信息，返回值为object
+Oiapi\Manager::getByName(string $name);
 
 /**
  * @param int | string $api    访问的api，可以是id与名称
@@ -108,7 +108,7 @@ Oiapi\Manager::getByName(string $name);  //通过名字获取接口信息，返�
  * @param array $route        路由参数[a, b, c]
  * @return mixed
  */
-Oiapi\Manager::go(int | string $api, mixed $data = null, array $route = []);  //通过名字获取接口信息，返回值为object
+Oiapi\Manager::go(int | string $api, mixed $data = null, array $route = []);
 
 
 ```
